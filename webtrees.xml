@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>webtrees</Name>
+  <Repository>nathanvaughn/webtrees</Repository>
+  <Registry>https://hub.docker.com/r/nathanvaughn/webtrees</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>webtrees is the web's leading on-line collaborative genealogy application.&#xD;
+For help configuring the parameters,  see https://hub.docker.com/r/nathanvaughn/webtrees&#xD;
+An unofficial CA of an unofficial docker image.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL/>
+  <Icon>https://webtrees.net/favicon.ico</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="PORT" Target="80" Default="" Mode="tcp" Description="The port used to connect to the web interface" Type="Port" Display="always" Required="true" Mask="false"/>
+<Config Name="PRETTY_URLS" Target="PRETTY_URLS" Default="False" Mode="" Description="Setting this to any truthy value (True, 1, yes) will enable pretty URLs. This can be toggled at any time, however you must go through initial setup at least once first." Type="Variable" Display="always" Required="false" Mask="false"/>
+<Config Name="LANG" Target="LANG" Default="en-us" Mode="" Description="webtrees localization setting. This takes a locale code. List: https://github.com/fisharebest/webtrees/tree/main/resources/lang/" Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="BASE_URL" Target="BASE_URL" Default="None" Mode="" Description="Base URL of the installation, with protocol. This needs to be in the form of http://webtrees.example.com" Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="DB_TYPE" Target="DB_TYPE" Default="mysql" Mode="" Description="Database server type. See below for valid values." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="DB_HOST" Target="DB_HOST" Default="None" Mode="" Description="Database server host." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="DB_PORT" Target="DB_PORT" Default="3306" Mode="" Description="Database server port." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="DB_USER" Target="DB_USER" Default="webtrees" Mode="" Description="Database server username." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="DB_PASS" Target="DB_PASS" Default="None" Mode="" Description="Database server password." Type="Variable" Display="always" Required="true" Mask="true"/>
+<Config Name="DB_NAME" Target="DB_NAME" Default="webtrees" Mode="" Description="Database name." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="DB_PREFIX" Target="DB_PREFIX" Default="wt_" Mode="" Description="Prefix to give all tables in the database. Set this to a value of &quot;&quot; to have no table prefix." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="DB_KEY" Target="DB_KEY" Default="None" Mode="" Description="Key file used to verify the MySQL server. Only use with the mysql database driver. Relative to the /var/www/webtrees/data/ directory." Type="Variable" Display="always" Required="false" Mask="false"/>
+<Config Name="DB_CERT" Target="DB_CERT" Default="None" Mode="" Description="Certificate file used to verify the MySQL server. Only use with the mysql database driver. Relative to the /var/www/webtrees/data/ directory." Type="Variable" Display="always" Required="false" Mask="false"/>
+<Config Name="DB_CA" Target="DB_CA" Default="None" Mode="" Description="Certificate authority file used to verify the MySQL server. Only use with the mysql database driver. Relative to the /var/www/webtrees/data/ directory." Type="Variable" Display="always" Required="false" Mask="false"/>
+<Config Name="DB_VERIFY" Target="DB_VERIFY" Default="False" Mode="" Description="Whether to verify the MySQL server. Only use with the mysql database driver. If True, you must also fill out DB_KEY, DB_CERT, and DB_CA." Type="Variable" Display="always" Required="false" Mask="false"/>
+<Config Name="WT_USER" Target="WT_USER" Default="None" Mode="" Description="First admin account username. Note, this is only used the first time the container is run, and the database is initialized." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="WT_NAME" Target="WT_NAME" Default="None" Mode="" Description="First admin account full name. Note, this is only used the first time the container is run, and the database is initialized." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="WT_PASS" Target="WT_PASS" Default="None" Mode="" Description="First admin account password. Note, this is only used the first time the container is run, and the database is initialized." Type="Variable" Display="always" Required="true" Mask="true"/>
+<Config Name="WT_EMAIL" Target="WT_EMAIL" Default="None" Mode="" Description="First admin account email. Note, this is only used the first time the container is run, and the database is initialized." Type="Variable" Display="always" Required="true" Mask="false"/>
+<Config Name="PHP_MEMORY_LIMIT" Target="PHP_MEMORY_LIMIT" Default="1024M" Mode="" Description="PHP memory limit. See the PHP documentation" Type="Variable" Display="always" Required="false" Mask="false"/>
+<Config Name="PHP_MAX_EXECUTION_TIME" Target="PHP_MAX_EXECUTION_TIME" Default="90" Mode="" Description="PHP max execution time for a request in seconds. See the PHP documentation" Type="Variable" Display="always" Required="false" Mask="false"/>
+<Config Name="PHP_POST_MAX_SIZE" Target="PHP_POST_MAX_SIZE" Default="50M" Mode="" Description="PHP POST request max size. See the PHP documentation" Type="Variable" Display="always" Required="false" Mask="false"/>
+<Config Name="PHP_UPLOAD_MAX_FILE_SIZE" Target="PHP_UPLOAD_MAX_FILE_SIZE" Default="50M" Mode="" Description="PHP max uploaded file size. See the PHP documentation" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
+
+
+
+
+
+
+
